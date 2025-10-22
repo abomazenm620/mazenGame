@@ -1,0 +1,50 @@
+/* إعدادات أساسية للصفحة */
+body {
+    margin: 0;
+    background-color: #87ceeb; /* خلفية زرقاء سماوية */
+    overflow: hidden; /* إخفاء أشرطة التمرير */
+}
+
+/* حاوية أزرار التحكم الرئيسية */
+.controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; /* توزيع الحاويتين يمين ويسار */
+    align-items: flex-end;
+}
+
+/* تصميم الأزرار */
+.controls button {
+    background-color: rgba(0, 0, 0, 0.5); /* خلفية سوداء شبه شفافة */
+    color: white; /* نص أبيض */
+    border: none;
+    border-radius: 50%; /* حواف دائرية بالكامل */
+    font-size: 24px; /* حجم خط مناسب */
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+
+    /* منع تحديد النص والتكبير باللمس */
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* تغيير بسيط عند الضغط على الزر */
+.controls button:active {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* media query لإخفاء الأزرار على الشاشات الكبيرة (الأجهزة المكتبية) */
+@media (min-width: 769px) {
+    .controls {
+        display: none;
+    }
+}
